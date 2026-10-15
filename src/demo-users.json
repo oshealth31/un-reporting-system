@@ -1,0 +1,27 @@
+{
+  "admin@unbotswana.org": {
+    "password": "demo123",
+    "name": "RCO Admin",
+    "initials": "RA",
+    "roleKey": "admin"
+  },
+  "agency@unbotswana.org": {
+    "password": "demo123",
+    "name": "UNICEF Lead",
+    "initials": "UL",
+    "roleKey": "agency",
+    "agency": "UNICEF"
+  },
+  "government@gov.bw": {
+    "password": "demo123",
+    "name": "Government Partner",
+    "initials": "GP",
+    "roleKey": "government"
+  },
+  "executive@unbotswana.org": {
+    "password": "demo123",
+    "name": "Executive Viewer",
+    "initials": "EV",
+    "roleKey": "executive"
+  }
+}

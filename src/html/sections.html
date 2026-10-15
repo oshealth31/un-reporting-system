@@ -1,0 +1,85 @@
+    <section id="tab-overview" class="stack"><div id="ov" class="stack"></div></section>
+
+    <section id="tab-indicators" hidden>
+      <div class="controls">
+        <label>Outcome<select id="f-out"></select></label>
+        <label>Data status<select id="f-status">
+          <option value="all">All</option><option value="tracked">Tracked</option><option value="notarget">No target</option>
+          <option value="stale">Out of date</option><option value="nodata">No data</option></select></label>
+        <label>Search<input type="search" id="f-q" placeholder="Indicator or agency"></label>
+        <button class="btn ghost" id="ind-export" type="button">Download all as CSV</button>
+      </div>
+      <div id="ind-out"></div>
+    </section>
+
+    <section id="tab-money" hidden>
+      <div class="controls">
+        <label>Outcome<select id="m-out"></select></label>
+        <label>Review line for spending (%)<input type="number" id="m-thr" value="75" min="0" max="100"></label>
+        <label class="inline"><input type="checkbox" id="m-joint"> Joint activities only</label>
+      </div>
+      <div id="money-out" class="stack"></div>
+    </section>
+
+    <section id="tab-delivery" hidden>
+      <div class="controls">
+        <label>Flag items waiting longer than (days)<input type="number" id="d-days" value="30" min="1" max="365"></label>
+      </div>
+      <div id="del-out" class="stack"></div>
+    </section>
+
+    <section id="tab-submit" hidden class="stack">
+      <div class="cols">
+        <div class="block">
+          <h2>Submit an indicator update</h2>
+          <p class="sub">For agency focal points. The update goes to the Resident Coordinator's Office and shows on the dashboard once accepted.</p>
+          <form id="u-form" novalidate>
+            <div class="fgrid">
+              <label>Agency<select id="u-agency"></select></label>
+              <label>Year<select id="u-year"></select></label>
+              <label class="wide">Indicator<select id="u-ind"></select></label>
+              <label>Value <span id="u-unit" class="unit"></span><input type="number" id="u-val" step="any" inputmode="decimal"></label>
+              <label class="wide">Source of the figure<input type="text" id="u-src" maxlength="140" placeholder="e.g. Ministry of Health annual report, table 4"></label>
+              <label class="wide">Note (optional)<input type="text" id="u-note" maxlength="240"></label>
+            </div>
+            <div id="u-ctx" class="ctx"></div>
+            <div class="controls"><button class="btn" type="submit" id="u-submit" disabled>Connecting</button><button class="btn ghost" type="button" id="u-example">Fill an example</button></div>
+            <div class="msg" id="u-msg" role="status"></div>
+          </form>
+        </div>
+        <div class="block">
+          <h2>Update queue</h2>
+          <p class="sub" id="q-sub"></p>
+          <div id="q-list"></div>
+        </div>
+      </div>
+      <details>
+        <summary>Upload many updates from a CSV</summary>
+        <p class="note">One row per update: indicator ID, year, value. They are submitted for review under the agency chosen above, each with the source "CSV upload". Up to 100 rows. Rows with an unknown ID, a year outside the range or a value that is not a number are rejected and listed.</p>
+        <textarea id="csv" aria-label="Indicator updates" spellcheck="false">indicator_id,year,value
+2.1.1,2025,71
+2.3.2,2025,590000
+5.0.3,2025,6</textarea>
+        <div class="controls" style="margin-top:10px">
+          <label>Or choose a CSV file<input type="file" id="csvfile" accept=".csv,text/csv,text/plain"></label>
+          <button class="btn" id="csv-apply" type="button" disabled>Submit rows</button>
+        </div>
+        <div class="msg" id="csv-msg" role="status"></div>
+      </details>
+    </section>
+
+    <section id="tab-report" hidden class="stack">
+      <div>
+        <h2>Draft a results summary</h2>
+        <p class="sub">Builds the text from the figures in the other tabs, so it always matches them. Edit it, then copy it into a donor update or an annual report.</p>
+        <div class="controls">
+          <label>Scope<select id="r-out"></select></label>
+          <button class="btn" id="r-draft" type="button">Draft summary</button>
+          <button class="btn ghost" id="r-copy" type="button">Copy text</button>
+          <button class="btn ghost" id="r-print" type="button">Print or save as PDF</button>
+        </div>
+        <textarea id="r-text" aria-label="Draft summary"></textarea>
+        <div id="r-printed" class="print-only" aria-hidden="true"></div>
+        <p class="note" id="r-note">This prototype writes the draft from a fixed template. In production a language model would work from the same data and could phrase it for each audience.</p>
+      </div>
+    </section>

@@ -1,0 +1,76 @@
+<div id="app-shell" class="app-shell">
+  <aside class="sidebar" aria-label="Primary">
+    <div class="brand">
+      <div class="brand-mark">R</div>
+      <div>
+        <div class="brand-name">Results Layer</div>
+        <div class="brand-meta">UN in Botswana</div>
+      </div>
+    </div>
+    <nav class="side-nav" id="side-nav" aria-label="Views"></nav>
+    <div class="sidebar-bottom">
+      <p class="data-note">Results run to 2024 and come from UN reports. Funding, work plan and delivery are sample data.</p>
+      <button class="help-link" id="help-open" type="button">Who can do what</button>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <!--@demo--><div class="demo-ribbon" role="note"><b>Demo mode</b> <span>Sample accounts.</span> <span class="demo-long">Agency updates stay in this browser tab and reset when you reload. Run the server for real sign-in and saved updates.</span></div><!--@/demo-->
+    <div class="mobile-topbar">
+      <div class="brand-mark small">R</div>
+      <div class="brand-name">Results Layer</div>
+    </div>
+
+    <header class="app-header">
+      <div>
+        <div class="eyebrow">Botswana cooperation framework, 2022 to 2026</div>
+        <h1 id="main-title" tabindex="-1">Programme intelligence</h1>
+        <p class="header-sub">A shared picture of results, resources and delivery.</p>
+      </div>
+      <div class="header-actions">
+        <div class="asof" id="asof"></div>
+        <button class="header-icon" id="bell" type="button" aria-label="Go to what needs attention">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8a5 5 0 0 1 10 0c0 4 1.5 5 1.5 5h-13S5 12 5 8z"/><path d="M8.5 16.5a1.8 1.8 0 0 0 3 0"/></svg>
+          <span class="notification-dot" hidden></span>
+        </button>
+        <div class="user-menu">
+          <button id="user-menu-button" class="user-button" type="button" aria-haspopup="true" aria-expanded="false">
+            <span class="avatar" id="user-avatar">RA</span>
+            <span><strong id="user-name">RCO Admin</strong><small id="user-role">RCO administrator</small></span>
+            <svg class="chevron" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 5.5l4 4 4-4"/></svg>
+          </button>
+          <div id="user-menu-dropdown" class="user-dropdown" hidden>
+            <div class="dropdown-role" id="dropdown-role"></div>
+            <button type="button" id="logout-button">Sign out</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="banner"><b>Real indicators, sample operations</b><span>Indicator names, IDs and values come from the UN's published reports on Botswana, with the source on each row. Funding by outcome, the work plan and approvals are invented for illustration and carry a Sample tag. Independent prototype, not an official UN product.</span></div>
+    <p class="role-note" id="role-note"></p>
+
+    <nav class="tabs mobile-tabs" role="tablist" id="mobile-tabs" aria-label="Views"></nav>
+
+    <main id="main">
+@@SECTIONS@@
+    </main>
+  </div>
+</div>
+<div id="tip" hidden></div>
+<dialog id="help" aria-labelledby="help-title">
+  <form method="dialog" class="dlg">
+    <h2 id="help-title">Who can do what</h2>
+    <table>
+      <thead><tr><th>Role</th><th>Sees</th><th>Can do</th></tr></thead>
+      <tbody>
+        <tr><td>RCO administrator</td><td>Every view</td><td>Submit for any agency, accept or reject updates</td></tr>
+        <tr><td>Agency lead</td><td>Overview, results, funding, agency updates, reports</td><td>Submit figures for their own agency</td></tr>
+        <tr><td>Government partner</td><td>Overview, results, delivery, reports</td><td>Read only</td></tr>
+        <tr><td>Executive viewer</td><td>Overview, reports</td><td>Read only</td></tr>
+      </tbody>
+    </table>
+    <p id="help-mode"></p>
+    <button class="btn" value="close">Close</button>
+  </form>
+</dialog>

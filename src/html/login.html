@@ -1,0 +1,62 @@
+<div id="login-screen" class="login-screen">
+  <section class="login-art">
+    <div class="brand">
+      <div class="brand-mark">R</div>
+      <div>
+        <div class="brand-name">Results Layer</div>
+        <div class="brand-meta">UN in Botswana</div>
+      </div>
+    </div>
+    <div class="login-pitch">
+      <p class="login-statement">See which outcomes are on course.</p>
+      <p class="login-statement-sub">Results, funding and delivery for the Botswana cooperation framework, in one shared picture for agencies, the Resident Coordinator's Office and government.</p>
+    </div>
+    <div class="ladder" aria-hidden="true">
+      <i style="--c:var(--o1);--h:34%;--i:0"></i><i style="--c:var(--o2);--h:52%;--i:1"></i><i style="--c:var(--o3);--h:68%;--i:2"></i><i style="--c:var(--o4);--h:84%;--i:3"></i><i style="--c:var(--o5);--h:100%;--i:4"></i>
+    </div>
+  </section>
+
+  <main class="login-main">
+    <div class="login-card">
+      <h1>Sign in</h1>
+      <p class="login-copy">Use your agency, government or Resident Coordinator's Office account.</p>
+
+      <form id="login-form" class="login-form" novalidate>
+        <div class="field">
+          <label for="login-email">Email</label>
+          <input id="login-email" type="email" autocomplete="username" placeholder="name@agency.org" required>
+        </div>
+        <div class="field">
+          <label for="login-password">Password</label>
+          <div class="pw-wrap">
+            <input id="login-password" type="password" autocomplete="current-password" required>
+            <button type="button" class="pw-toggle" id="pw-toggle" aria-pressed="false" aria-label="Show password">Show</button>
+          </div>
+        </div>
+        <div class="login-row">
+          <label class="remember"><input id="login-remember" type="checkbox"> Remember my email</label>
+          <button class="text-button" type="button" id="forgot-password">Forgot password?</button>
+        </div>
+        <button class="login-button" type="submit" id="login-go">Sign in</button>
+        <div id="login-error" class="login-error" role="alert" hidden></div>
+        <noscript><div class="login-error">Turn on JavaScript in your browser to sign in.</div></noscript>
+      </form>
+
+      <!--@demo-->
+      <div class="demo-access" id="demo-access">
+        <div class="demo-title">Try a demo account</div>
+        <div class="demo-sub">Select a role to sign in. Every demo account uses the password demo123.</div>
+        <div class="demo-list">
+          <button type="button" data-demo="admin"><strong>RCO administrator</strong><span>Sees every view, submits for any agency, accepts or rejects updates</span></button>
+          <button type="button" data-demo="agency"><strong>Agency lead, UNICEF</strong><span>Submits figures for UNICEF and follows their review</span></button>
+          <button type="button" data-demo="government"><strong>Government partner</strong><span>Read-only: overview, results, delivery and reports</span></button>
+          <button type="button" data-demo="executive"><strong>Executive viewer</strong><span>Read-only: overview and reports</span></button>
+        </div>
+      </div>
+      <!--@/demo-->
+
+      <p class="login-footer" id="server-note" hidden>Access is limited to authorised users. Sign-ins and review decisions are logged.</p>
+      <p class="login-footer">Independent prototype, not an official UN product. Funding, work plan and delivery figures are samples.</p>
+    </div>
+  </main>
+</div>

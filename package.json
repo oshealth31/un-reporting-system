@@ -1,0 +1,14 @@
+{
+  "name": "results-layer",
+  "version": "0.3.0",
+  "description": "Shared results, funding and delivery view for the UN in Botswana, with role-based sign-in. Pilot prototype.",
+  "license": "MIT",
+  "private": true,
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "start": "node server/server.js",
+    "test": "node scripts/build.js && node --test test/*.test.js",
+    "fonts": "sh scripts/fetch-fonts.sh"
+  }
+}
