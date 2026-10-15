@@ -2,7 +2,7 @@
 
 ## Reporting a problem
 
-Open a private security advisory on GitHub (Security tab, "Report a vulnerability") or email the maintainer listed in the repository profile. Please do not post details in a public issue. Expect an acknowledgement within a few working days.
+Open a private security advisory on GitHub (Security tab, "Report a vulnerability") or email "fundinglens@gmail.com" the maintainer listed in the repository profile. Please do not post details in a public issue. Expect an acknowledgement within a few working days.
 
 ## Status
 
